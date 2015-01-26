@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<a href="/rango/about">About</a>
 <html>
     <head>
         <title>Rango</title>
@@ -19,11 +20,12 @@
        {% endif %}
 		
 		<h2>Top Views</h2>
-		{% if categories %}
+		{% if views %}
             <ul>
-                {% for category in views %}
+                {% for Page in views %}
                 <!-- Following line changed to add an HTML hyperlink -->
-                <li><a href="/rango/category/{{ category.slug }}">{{ category.name }}</a></li>
+				
+                <li><a href="/rango/category/{{ page.slug }}">{{ Page.title }}</a></li>
                 {% endfor %}
             </ul>
        {% else %}
