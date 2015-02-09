@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 
-{% load staticfiles %} <!-- New line -->
+{% extends 'rango/base.html' %}
 
-<html>
+{% load staticfiles %}
 
-    <head>
-        <title>Rango</title>
-    </head>
+{% block title %}About{% endblock %}
 
-    <body>
+{% block body_block %}
         <h1>Praxitelis says...</h1>
         hello world! <strong>{{ boldmessage }}</strong><br />
-        <a href="/rango/">Index</a><br />
         <img src="{% static "images/Prax_the_Image.jpg" %}" alt="Picture of Praxitelis Branko Kourtelos" /> 
-		<br/>This tutorial ahs been put together by Praxitelis Branko Kourtelos,2060408k<br/>
-    </body>
+		<br/>This tutorial has been put together by Praxitelis Branko Kourtelos,2060408k<br/>
+{% endblock %}
 
 </html>
