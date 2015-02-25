@@ -29,12 +29,12 @@ TEMPLATE_DIRS = [
     TEMPLATE_PATH,
 ]
 TEMPLATE_DEBUG = True
-
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
+SESSION_ENGINE="django.contrib.sessions.backends.signed_cookies"
 LOGIN_URL = '/rango/login/'
 
 INSTALLED_APPS = (

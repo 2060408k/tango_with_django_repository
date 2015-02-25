@@ -7,6 +7,10 @@
 {% block title %}About{% endblock %}
 
 {% block body_block %}
+		{% if visits %}
+			Meow = {{ visits }}
+		{% endif %}
+		
         <h1>Praxitelis says...</h1>
         hello world! <strong>{{ boldmessage }}</strong><br />
         <img src="{% static "images/Prax_the_Image.jpg" %}" alt="Picture of Praxitelis Branko Kourtelos" /> 
