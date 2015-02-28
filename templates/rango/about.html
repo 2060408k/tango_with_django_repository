@@ -7,14 +7,24 @@
 {% block title %}About{% endblock %}
 
 {% block body_block %}
-		{% if visits %}
-			Visits of this page = {{ visits }}
-		{% endif %}
+		<div class="page-header">
+                <h1>About Rango</h1>
+            </div>
+            <div>
+            <p></strong>.</p>
+			{% if visits %}
+				Visits of this page = {{ visits }}</br>
+			{% endif %}
+			This is <b>Praxitelis about page</b></br>
+			Here is a picture of Praxitelis:</br>
+            <img  width="450" height="500" src="{% static "images/Prax_the_Image.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+			
 		
-        <h1>Praxitelis says...</h1>
-        hello world! <strong>{{ boldmessage }}</strong><br />
-        <img src="{% static "images/Prax_the_Image.jpg" %}" alt="Picture of Praxitelis Branko Kourtelos" /> 
-		<br/>This tutorial has been put together by Praxitelis Branko Kourtelos,2060408k<br/>
+			<h1>Praxitelis says...</h1>
+			hello world! <strong>{{ boldmessage }}</strong><br />
+			<br/>This tutorial has been put together by Praxitelis Branko Kourtelos,2060408k<br/>
+         </div>
+		
 {% endblock %}
 
 </html>
