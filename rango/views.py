@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 from django.shortcuts import render_to_response
+from rango.bing_search import run_query
 def index(request):
 	
     category_list = Category.objects.order_by('-likes')[:5]
@@ -303,3 +304,16 @@ def user_logout(request):
     return render(request,
             'rango/register.html',
             {'user_form': user_form, 'profile_form': profile_form, 'registered': registered} )
+
+def search(request):
+
+    result_list = []
+
+    if request.method == 'POST':
+        query = request.POST['query'].strip()
+
+        if query:
+            # Run our Bing function to get the results list!
+            result_list = run_query(query)
+
+    return render(request, 'rango/search.html', {'result_list': result_list})
