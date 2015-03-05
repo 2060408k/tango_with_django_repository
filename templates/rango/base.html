@@ -41,10 +41,10 @@
                         <li><a href="{% url 'auth_logout' %}?next=/rango/">Logout</a></li>
                         <li><a href="{% url 'add_category' %}">Add a New Category</a></li>
 						<li><a href="/accounts/password/change"> Change passwords</a></li>
+						<li><a href="{% url 'profile' %}">User Profile</a></li>
                     {% else %}
                         <li><a href="{% url 'registration_register' %}">Register Here</a></li>
                         <li><a href="{% url 'auth_login' %}">Login</a></li>
-						<li><a href="{% url 'search' %}">Search</a></li>
                     {% endif %}
                                 <li><a href="{% url 'about' %}">About</a></li>
 
