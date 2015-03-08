@@ -27,7 +27,7 @@
 				{% if categories %}
 					<ul class="list-group"> 
 						{% for category in categories %}
-							<li class="list-group-item"><a href="{% url 'category'  category.slug %}">{{ category.name }}</a></li>
+							<li class="list-group-item"><a href="{% url 'category'  category.slug %}">{{ category.name }} </a>(likes {{category.likes}})</li>
 						{% endfor %}
 					</ul>
 				{% else %}
@@ -45,7 +45,7 @@
                 {% if views %}
 					<ul class="list-group"> 
 						{% for Page in views %}
-							<li class="list-group-item"><a href="{{ Page.url }}">{{ Page.title }}</a></li>
+							<li class="list-group-item"><a href="{{ Page.url }}">{{ Page.title }}</a>({{ Page.views }} views)</li>
 						{% endfor %}
 					</ul>
 				{% else %}
