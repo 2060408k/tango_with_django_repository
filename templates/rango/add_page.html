@@ -17,7 +17,7 @@
             {{ hidden }}
             {% endfor %}
 
-            {% for field in form.visible_fields %}
+            <br>{% for field in form.visible_fields %} <br/>
             {{ field.errors }}
             {{ field.help_text }}<br/>
             {{ field }}

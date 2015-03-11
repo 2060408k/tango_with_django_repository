@@ -32,7 +32,7 @@ TEMPLATE_DIRS = [
 ]
 TEMPLATE_DEBUG = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['2060408k.pythonanywhere.com']
 
 REGISTRATION_OPEN = True                # If True, users can register
 ACCOUNT_ACTIVATION_DAYS = 7     # One-week activation window; you may, of course, use a different value.

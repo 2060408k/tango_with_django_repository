@@ -4,7 +4,7 @@ from django.conf import settings
 from registration.backends.simple.views import RegistrationView
 class MyRegistrationView(RegistrationView):
     def get_success_url(self,request, user):
-        return '/rango/'
+        return '/rango/add_profile'
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'tango_with_django_project_17.views.home', name='home'),
@@ -17,7 +17,7 @@ urlpatterns = patterns('',
 
 )
 
-		
+
 if settings.DEBUG:
     urlpatterns += patterns(
         'django.views.static',

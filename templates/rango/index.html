@@ -16,8 +16,8 @@
 
          <div class="row placeholders">
             <div class="col-xs-12 col-sm-6 placeholder">
-			
-			
+
+
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h3 class="panel-title">Categories</h3>
@@ -25,7 +25,7 @@
 				</div>
 
 				{% if categories %}
-					<ul class="list-group"> 
+					<ul class="list-group">
 						{% for category in categories %}
 							<li class="list-group-item"><a href="{% url 'category'  category.slug %}">{{ category.name }} </a>(likes {{category.likes}})</li>
 						{% endfor %}
@@ -43,9 +43,9 @@
 			</div>
 
                 {% if views %}
-					<ul class="list-group"> 
+					<ul class="list-group">
 						{% for Page in views %}
-							<li class="list-group-item"><a href="{{ Page.url }}">{{ Page.title }}</a>({{ Page.views }} views)</li>
+							<li class="list-group-item"><a href="{% url 'goto' %}?page_id={{Page.id}}">{{ Page.title }}</a>({{ Page.views }} views)</li>
 						{% endfor %}
 					</ul>
 				{% else %}

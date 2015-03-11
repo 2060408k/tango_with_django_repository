@@ -6,8 +6,14 @@
 <div class="hero-unit">
    	   <h1> Profile <h1> <br/>
 	   <h1>{{ user.username }}</h1>
+
        <h2>Email: {{ user.email }}</h2>
+
+       {% if userprofile %}
 	   <h2>Website: <a href="{{ userprofile.website }}">{{userprofile.website}}</a></h2><<br/>
+	   {% endif %}
+	   {% if userprofile.picture %}
 	   <img src="{{ UserProfile.picture.url }}" alt="User image" height="400" width="400">
+	   {% endif %}
 </div>
 {% endblock %}
